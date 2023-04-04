@@ -6,12 +6,14 @@ label = sg.Text("Enter your todo")
 input_box = sg.InputText(key="todo")
 add_button = sg.Button('Add')
 edit_button = sg.Button('Edit')
+exit_button = sg.Button('Exit')
+completed_button = sg.Button('Completed')
 list_box = sg.Listbox(values=functions.get_todos(), key="todos", enable_events=True, size=[20, 5])
 
 window = sg.Window("My Todo App",
                    layout=[[label, input_box, add_button],
-                           [list_box],
-                           [edit_button]],
+                           [list_box, exit_button],
+                           [edit_button, completed_button]],
                    font=('Helvetica', 15))
 
 while True:
@@ -33,6 +35,15 @@ while True:
         window['todos'].update(values=todos)
     elif event == "todos":
         window['todo'].update(value=values['todos'])
+    elif event == "Exit":
+        exit()
+    elif event == "Completed":
+        completed_todo = values['todos'][0]
+        todos = functions.get_todos()
+        todos.remove(completed_todo)
+        functions.write_todos(todos)
+        window['todos'].update(values=todos)
+
     elif event == sg.WIN_CLOSED:
         break
 
