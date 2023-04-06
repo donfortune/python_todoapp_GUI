@@ -1,8 +1,2 @@
-hello
-do the laundry
-wash the cars
-configure a server with ansible
-Read Proverbs
 take your drugsfix the computerfix the computersclean the fridgeRead a book
-sing
 dance
