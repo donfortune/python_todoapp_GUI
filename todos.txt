@@ -1,1 +1,5 @@
 hello
+do the laundry
+wash the cars
+configure a server with ansible
+Read Proverbs
