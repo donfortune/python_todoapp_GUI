@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st #importing streamlit
 import functions
 todos = functions.get_todos()
 
