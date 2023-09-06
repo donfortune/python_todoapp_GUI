@@ -1,4 +1,4 @@
-FILEPATH = 'todos.txt'
+FILEPATH = 'todos_list.txt'
 
 
 def get_todos(filepath=FILEPATH):
