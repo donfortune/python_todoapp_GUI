@@ -3,7 +3,7 @@ import functions
 import time
 import os
 
-if not os.path.exists('todos.txt'):   #condition
+if not os.path.exists('todos.txt'):   
     with open('todos.txt', 'w') as file:
         pass
 
